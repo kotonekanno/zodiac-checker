@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>What's your zoadic sign?</h1>
+    <h1>What's your zodiac sign?</h1>
     <form method="post">
         <h2>Enter your birthday</h2>
         <label for="month">month</label>
@@ -19,12 +19,12 @@
         <br>
         <button type="submit" name="action" value="reset">Reset</button>
     </form>
-    {% if zoadic %}
-        <p>Your zoadic sign is  </p>
-        <p class="zoadic">{{ zoadic }} </p>
+    {% if zodiac %}
+        <p>Your zodiac sign is  </p>
+        <p class="zodiac">{{ zodiac }} </p>
         <p>.</p>
         <br>
-        <img src="{{ url_for('static',filename=zoadic + '.jpg') }}">
+        <img src="{{ url_for('static',filename=zodiac + '.jpg') }}">
     {% endif %}
     {% if error %}
         <p class="error">{{error}}</p>

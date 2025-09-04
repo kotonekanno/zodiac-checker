@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/',methods=['GET','POST'])
 def home():
     error = None
-    zoadic = None
+    zodiac = None
 
     if request.method == 'POST':
         action = request.form.get('action')
@@ -20,49 +20,49 @@ def home():
             except(ValueError,KeyError):
                 error = 'Invalid number'
             else:
-                zoadic = determine_zoadic(month,day)
+                zodiac = determine_zodiac(month,day)
 
-    return render_template('index.html', zoadic=zoadic, error=error)
+    return render_template('index.html', zodiac=zodiac, error=error)
 
-def determine_zoadic(month,day):
+def determine_zodiac(month,day):
     match month:
         case 1:
-            if day<=19: zoadic = ('Capricorn')
-            else: zoadic = ('Aquarius')
+            if day<=19: zodiac = ('Capricorn')
+            else: zodiac = ('Aquarius')
         case 2:
-            if day<=18: zoadic = ('Aquarius')
-            else: zoadic = ('Pisces')
+            if day<=18: zodiac = ('Aquarius')
+            else: zodiac = ('Pisces')
         case 3:
-            if day<=20: zoadic = ('Pisces')
-            else: zoadic = ('Aries')
+            if day<=20: zodiac = ('Pisces')
+            else: zodiac = ('Aries')
         case 4:
-            if day<=19: zoadic = ('Aries')
-            else: zoadic = ('Taurus')
+            if day<=19: zodiac = ('Aries')
+            else: zodiac = ('Taurus')
         case 5:
-            if day<=20: zoadic = ('Taurus')
-            else: zoadic = ('Gemini')
+            if day<=20: zodiac = ('Taurus')
+            else: zodiac = ('Gemini')
         case 6:
-            if day<=21: zoadic = ('Gemini')
-            else: zoadic = ('Cancer')
+            if day<=21: zodiac = ('Gemini')
+            else: zodiac = ('Cancer')
         case 7:
-            if day<=22: zoadic = ('Cancer')
-            else: zoadic = ('Leo')
+            if day<=22: zodiac = ('Cancer')
+            else: zodiac = ('Leo')
         case 8:
-            if day<=22: zoadic = ('Leo')
-            else: zoadic = ('Virgo')
+            if day<=22: zodiac = ('Leo')
+            else: zodiac = ('Virgo')
         case 9:
-            if day<=22: zoadic = ('Virgo')
-            else: zoadic = ('Libra')
+            if day<=22: zodiac = ('Virgo')
+            else: zodiac = ('Libra')
         case 10:
-            if day<=23: zoadic = ('Libra')
-            else: zoadic = ('Scorpio')
+            if day<=23: zodiac = ('Libra')
+            else: zodiac = ('Scorpio')
         case 11:
-            if day<=21: zoadic = ('Scorpio')
-            else: zoadic = ('Sagittarius')
+            if day<=21: zodiac = ('Scorpio')
+            else: zodiac = ('Sagittarius')
         case 12:
-            if day<=21: zoadic = ('Sagittarius')
-            else: zoadic = ('Capricorn')
-    return zoadic
+            if day<=21: zodiac = ('Sagittarius')
+            else: zodiac = ('Capricorn')
+    return zodiac
 
 if __name__ == '__main__':
     app.run(debug=True)
