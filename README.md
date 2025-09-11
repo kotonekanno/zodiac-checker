@@ -57,7 +57,7 @@ This project was created as practice for Python and web application development.
   py app.py
   ```
 
-6. Open (http://127.0.0.1:5000) in your browser
+6. Open http://127.0.0.1:5000 in your browser
 
 
 ### macOS / Linux
@@ -91,7 +91,7 @@ This project was created as practice for Python and web application development.
 python app.py
 ```
 
-6. Open (http://127.0.0.1:5000) in your browser
+6. Open http://127.0.0.1:5000 in your browser
 
 
 ## Directory Structure
