@@ -72,7 +72,7 @@ This project was created as practice for Python and web application development.
   cd zodiac-checker
   ```
 
-3. Build a virtual environment
+3. Create a virtual environment
 
   ```bash
   python3 -m venv venv
